@@ -1,0 +1,132 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  NHS Document Store
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <h1>NHS Digital Letters</h1>
+      <p class="nhsuk-lead-text">
+        Prototypes to test new journey's for the NHS Digital Letters project.
+      </p>
+
+      <h2 class="nhsuk-heading-s">Release 1.0 - User Research - Round 2 (TBC)</h2>
+        <ul clas="nhsuk-list">
+          <form id="osForm" method="POST">
+            <li>
+              <a href="sms-preview-native/index" id="appNative">SMS Preview - Native App</a>
+            </li>
+            <li>
+              <a href="sms-preview-web/index" id="appOnline">SMS Preview - Web Login</a>
+            </li>
+            <li>
+              <a href="preview-hidden/index" id="appNative">SMS Preview Hidden - Native App</a>
+            </li>
+          </form>
+        </ul>
+
+      <h2 class="nhsuk-heading-s">Release 1.0 - User Research - Round 1 (April 2025)</h2>
+        <ul clas="nhsuk-list">
+          <form id="osForm" method="POST">
+            <li>
+              <a href="native-biometrics-journey/index" id="appNative">Native App - Biometrics</a>
+            </li>
+            <li>
+              <a href="native-login-journey/index" id="appNative">Native App - Manual login</a>
+            </li>
+            <li>
+              <a href="app-online-journey/index" id="appOnline">Web login</a>
+            </li>
+          </form>
+        </ul>
+
+        <h2 class="nhsuk-heading-s">Additional Journeys</h2>
+          <ul clas="nhsuk-list">
+              <li>
+                <a href="sms/sms-list">SMS Versions</a>
+              </li>
+  
+              <li>
+                <a href="reset-password/index">Reset password</a>
+              </li>
+  
+              <li>
+                <a href="amends/landing-page">Landing page iteration</a>
+              </li>
+          </ul>
+
+          <h2 class="nhsuk-heading-s">Demo Journey's</h2>
+            <ul clas="nhsuk-list">
+                <li>
+                  <a href="release-1/notification">Release 1.0 - Native App Journey</a>
+                </li>
+                <li>
+                  <a href="release-1/notification-web">Release 1.0 - Web login journey</a>
+                </li>
+            </ul>
+
+      <!-- <h2>Prototype settings</h2>
+      <p>You can <a href="/settings">use settings to change the prototype journey.</a></p>  -->
+
+
+    </div>
+  </div>
+{% endblock %}
+
+{% block pageScripts %}
+<!-- <script>
+  // Function to detect the operating system
+  function detectOperatingSystem() {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Check for iOS
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          return "iOS";
+      }
+      // Check for Android
+      else if (/android/i.test(userAgent)) {
+          return "Android";
+      }
+      // If neither, return Unknown
+      else {
+          return "Unknown OS";
+      }
+  }
+
+
+    // Function to update the link URLs based on OS
+      function updateLinks() {
+      const os = detectOperatingSystem();
+
+      const appNative = document.getElementById('appNative');
+      const appOnline = document.getElementById('appOnline');
+
+      // Modify the URLs based on the OS detected
+      if (os === "iOS") {
+        appNative.href = "/native-biometrics-journey/index";
+        appOnline.href = "/app-online-journey/index";
+      } else if (os === "Android") {
+        appNative.href = "/native-biometrics-journey/android-lockscreen";
+        appOnline.href = "/app-online-journey/android-lockscreen";
+      } else {
+        // For unknown OS, you can set default URLs
+        appNative.href = "/native-biometrics-journey/index";
+        appOnline.href = "/app-online-journey/index";
+      }
+    }
+
+    // Call the updateLinks function when the page loads
+    window.onload = updateLinks;
+    console.log("Operating System:", detectOperatingSystem(
+
+    ));
+</script> -->
+{% endblock %}
