@@ -7514,7 +7514,7 @@ b {
   margin-right: 8px;
   border-radius: 4px;
   bottom: calc(0.5 * (0.7em - 8px));
-  background-color: #d5281b;
+  background-color: #005eb8;
 }
 @media (min-width: 40.0625em) {
   .nhsapp-badge-small__indicator {
